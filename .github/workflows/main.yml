@@ -34,10 +34,6 @@ jobs:
            python -m pip install --upgrade pip
            pip install -r requirements.txt
 
-      - name: execute py script
-        env:
-           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python app/app.py
 
       - name: Package Python application
         run: zip -r python-app.zip app/ requirements.txt
