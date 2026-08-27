@@ -1,0 +1,190 @@
+# DevOps Task API
+
+## Overview
+
+DevOps Task API is a simple Flask-based REST API created as a hands-on project for learning DevOps concepts and tools. The project demonstrates how to build, test, package, secure, containerize, and automate the deployment workflow of a Python application.
+
+This project is designed to practice:
+
+* Python application development
+* Code quality checks with Flake8
+* Git and GitHub
+* GitHub Actions CI/CD pipelines
+* Docker and Docker Compose
+* Security scanning with Trivy
+* AWS Elastic Container Registry (ECR)
+
+---
+
+
+
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+cd devops-task-api
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Virtual Environment
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Application
+
+Start the Flask application:
+
+```bash
+python app/app.py
+```
+
+The application will run on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## Running Tests
+
+Execute unit tests:
+
+```bash
+pytest
+```
+
+---
+
+## Code Quality Check
+
+Run Flake8:
+
+```bash
+flake8 .
+```
+
+---
+
+## Docker
+
+Build the Docker image:
+
+```bash
+docker build -t devops-task-api .
+```
+
+Run the container:
+
+```bash
+docker run -p 5000:5000 devops-task-api
+```
+
+---
+
+## Security Scanning
+
+Trivy is used to perform vulnerability scans on the project.
+
+Example:
+
+```bash
+trivy fs .
+```
+
+---
+
+## CI/CD Pipeline
+
+The GitHub Actions workflow automates:
+
+1. Code checkout
+2. Python setup
+3. Dependency installation
+4. Unit testing with Pytest
+5. Code style analysis with Flake8
+6. Security scanning using Trivy
+7. Artifact generation and upload
+
+---
+
+## AWS ECR
+
+Docker images generated from this project can be pushed to Amazon Elastic Container Registry (ECR) for storage and deployment.
+
+Workflow:
+
+```text
+Developer
+    ↓
+GitHub Repository
+    ↓
+GitHub Actions
+    ↓
+Testing & Security Scan
+    ↓
+Docker Build
+    ↓
+AWS ECR
+```
+
+---
+
+## Technologies Used
+
+* Python 3.10
+* Flask
+* Pytest
+* Flake8
+* Docker
+* Docker Compose
+* GitHub Actions
+* Trivy
+* AWS ECR
+
+---
+
+## Learning Objectives
+
+This project was built to strengthen practical knowledge in:
+
+* DevOps fundamentals
+* Continuous Integration (CI)
+* Continuous Delivery (CD)
+* Containerization
+* Security automation
+* Cloud-native workflows
+
+---
+
+## Author
+
+Vanessa Jideonwo
+
+DevOps Engineering Learning Project
